@@ -1,0 +1,38 @@
+ul , li {
+padding : 2px ;
+font-weight : bold ;
+
+}
+main {
+    text-align : center ;
+}
+h1 {
+    text-align : center ;
+
+    color :lightcoral ;
+    font-weight : 50px ;
+}
+a {
+    font-size: 20px ;
+
+    border : 10px ;
+}
+button {
+    width : 25% ;
+    position: absolute;
+    right : 500px ;
+    display : block ;
+    outline : none ;
+    padding : 10px 0 ;
+    border : 1 px solid rgb(230, 20, 20) ;
+    cursor : pointer ;
+    background : transparent ;
+    font-family: 20px ;
+      
+}
+
+img {
+
+    width : 800px ;
+    height : 300px ;
+}
