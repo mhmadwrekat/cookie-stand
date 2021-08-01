@@ -29,19 +29,24 @@ const seattle = {
     let h2 = document.createElement('h2');
     h2.textContent = this.name;
     article.appendChild(h2);
-    let li ;
+    let t = 0 ;
+    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
     for (let i = 0 ; i < this.hourCookie.length ; i++)
     {
       li = document.createElement('li');
       li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
+      t += parseInt(this.geCustomer(this.min,this.max)) ;
+      this.totalSeattle = (t) ;
       article.appendChild(li);
     }
-    
+
     let hr = document.createElement('hr');
-    hr.textContent = '';
+    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
     article.appendChild(hr);
   }
 };
+//console.log(seattle.print());
+
 
 // object TWO ( TOKYO ) :
 const tokyo = {
@@ -72,15 +77,19 @@ const tokyo = {
     let h2 = document.createElement('h2');
     h2.textContent = this.name;
     article.appendChild(h2);
-    let li ;
+    let t = 0 ;
+    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
     for (let i = 0 ; i < this.hourCookie.length ; i++)
     {
       li = document.createElement('li');
       li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
+      t += parseInt(this.geCustomer(this.min,this.max)) ;
+      this.totalSeattle = (t) ;
       article.appendChild(li);
     }
+
     let hr = document.createElement('hr');
-    hr.textContent = '';
+    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
     article.appendChild(hr);
   }
 };
@@ -114,15 +123,19 @@ const dubai = {
     let h2 = document.createElement('h2');
     h2.textContent = this.name;
     article.appendChild(h2);
-    let li ;
+    let t = 0 ;
+    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
     for (let i = 0 ; i < this.hourCookie.length ; i++)
     {
       li = document.createElement('li');
       li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
+      t += parseInt(this.geCustomer(this.min,this.max)) ;
+      this.totalSeattle = (t) ;
       article.appendChild(li);
     }
+
     let hr = document.createElement('hr');
-    hr.textContent = '';
+    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
     article.appendChild(hr);
   }
 };
@@ -156,15 +169,19 @@ const paris = {
     let h2 = document.createElement('h2');
     h2.textContent = this.name;
     article.appendChild(h2);
-    let li ;
+    let t = 0 ;
+    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
     for (let i = 0 ; i < this.hourCookie.length ; i++)
     {
       li = document.createElement('li');
       li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
+      t += parseInt(this.geCustomer(this.min,this.max)) ;
+      this.totalSeattle = (t) ;
       article.appendChild(li);
     }
+
     let hr = document.createElement('hr');
-    hr.textContent = '';
+    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
     article.appendChild(hr);
   }
 };
@@ -198,15 +215,19 @@ const lima = {
     let h2 = document.createElement('h2');
     h2.textContent = this.name;
     article.appendChild(h2);
-    let li ;
+    let t = 0 ;
+    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
     for (let i = 0 ; i < this.hourCookie.length ; i++)
     {
       li = document.createElement('li');
       li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
+      t += parseInt(this.geCustomer(this.min,this.max)) ;
+      this.totalSeattle = (t) ;
       article.appendChild(li);
     }
+
     let hr = document.createElement('hr');
-    hr.textContent = '';
+    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
     article.appendChild(hr);
   }
 };
@@ -218,5 +239,6 @@ tokyo.print();
 dubai.print();
 paris.print();
 lima.print();
+
 
 
