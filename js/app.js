@@ -1,238 +1,85 @@
 'use strict' ;
 
-// object ONE ( SEATTLE ) :
-const seattle = {
-  name : 'SEATTLE' ,
-  min : 23 ,
-  max : 65 ,
-  avgCustomer : 0 ,
-  avgCookie : 6.3 ,
-  avgCookiePerhour : 0 ,
-  hour : ['6 Am : ','7 Am : ','8 Am : ','9 Am : ','10 Am : ','11 Am : ','12 pm : ','1 pm : ','2 pm : ','3 pm : ','4 pm : ','5 pm : ','6 pm : ','7 pm : ','8 pm : '],
-  hourCookie : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-  totalSeattle : 0 ,
-  geCustomer : function (min,max)
+let hour = ['6 Am','7 Am','8 Am','9 Am','10Am','11Am','12pm','1 pm','2 pm','3 pm','4 pm','5 pm','6 pm','7 pm','Location Total'];
+
+function Cookie(name,min,max,avgCookie){
+  this.name = name ;
+  this.min = min ;
+  this.max = max ;
+  this.avgCustomer = [] ;
+  this.avgCookie = avgCookie ;
+  this.avgCookiePerhour = 0 ;
+  this.hourCookie = [];
+  this.totalAvg = 0 ;
+}
+
+let cookie = document.getElementById('cookie');
+let table = document.createElement('table');
+cookie.appendChild(table);
+
+function printStructure ()
+{
+  let tr = document.createElement('tr');
+  table.appendChild(tr);
+  let th = document.createElement('th');
+  tr.appendChild(th);
+
+  for (let i = 0 ; i <= hour.length ; i++)
   {
-
-    this.avgCustomer = Math.floor((Math.random() * (max - min + 1) + min)*1) ;
-    this.avgCookiePerhour = this.avgCustomer * this.avgCookie ;
-    this.totalSeattle += this.totalSeattle ;
-    return this.avgCookiePerhour ;
-  },
-  print : function ()
-  {
-    let cookie = document.getElementById('cookie');
-
-    let article = document.createElement('article');
-    cookie.appendChild(article);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = this.name;
-    article.appendChild(h2);
-    let t = 0 ;
-    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
-    for (let i = 0 ; i < this.hourCookie.length ; i++)
-    {
-      li = document.createElement('li');
-      li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
-      t += parseInt(this.geCustomer(this.min,this.max)) ;
-      this.totalSeattle = (t) ;
-      article.appendChild(li);
-    }
-
-    let hr = document.createElement('hr');
-    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
-    article.appendChild(hr);
+    th = document.createElement('th');
+    Cookie.avgCustomer = parseInt(ranNum(Cookie.min,Cookie.max) * Cookie.avgCookie) ;
+    th.textContent = hour[i] ;
+    tr.appendChild(th);
   }
-};
-//console.log(seattle.print());
+}
 
+printStructure();
 
-// object TWO ( TOKYO ) :
-const tokyo = {
-  name : 'TOKYO' ,
-  min : 3 ,
-  max : 24 ,
-  avgCustomer : 0 ,
-  avgCookie : 1.2 ,
-  avgCookiePerhour : 0 ,
-  hour : ['6 Am : ','7 Am : ','8 Am : ','9 Am : ','10 Am : ','11 Am : ','12 pm : ','1 pm : ','2 pm : ','3 pm : ','4 pm : ','5 pm : ','6 pm : ','7 pm : ','8 pm : '],
-  hourCookie : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-  totalSeattle : 0 ,
-  geCustomer : function (min,max)
+Cookie.prototype.print = function()
+{
+  let tr = document.createElement('tr');
+  table.appendChild(tr);
+
+  let nam = document.createElement('td');
+  nam.textContent = this.name ;
+  tr.appendChild(nam);
+  let li ;
+  for (let i = 1 ; i < hour.length ; i++)
   {
-
-    this.avgCustomer = Math.floor((Math.random() * (max - min + 1) + min)*1) ;
-    this.avgCookiePerhour = this.avgCustomer * this.avgCookie ;
-    this.totalSeattle += this.totalSeattle ;
-    return this.avgCookiePerhour ;
-  },
-  print : function ()
-  {
-    let cookie = document.getElementById('cookie');
-
-    let article = document.createElement('article');
-    cookie.appendChild(article);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = this.name;
-    article.appendChild(h2);
-    let t = 0 ;
-    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
-    for (let i = 0 ; i < this.hourCookie.length ; i++)
-    {
-      li = document.createElement('li');
-      li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
-      t += parseInt(this.geCustomer(this.min,this.max)) ;
-      this.totalSeattle = (t) ;
-      article.appendChild(li);
-    }
-
-    let hr = document.createElement('hr');
-    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
-    article.appendChild(hr);
+    li = document.createElement('td');
+    this.avgCustomer = parseInt(ranNum(this.min,this.max) * this.avgCookie) ;
+    li.textContent = this.avgCustomer ;
+    this.totalAvg += this.avgCustomer ;
+    tr.appendChild(li);
   }
+  let td = document.createElement('td');
+  td.textContent = this.totalAvg + ' Cookies';
+  tr.appendChild(td);
 };
 
-// object THREE ( DUBAI ) :
-const dubai = {
-  name : 'DUBAI' ,
-  min : 11 ,
-  max : 38 ,
-  avgCustomer : 0 ,
-  avgCookie : 3.7 ,
-  avgCookiePerhour : 0 ,
-  hour : ['6 Am : ','7 Am : ','8 Am : ','9 Am : ','10 Am : ','11 Am : ','12 pm : ','1 pm : ','2 pm : ','3 pm : ','4 pm : ','5 pm : ','6 pm : ','7 pm : ','8 pm : '],
-  hourCookie : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-  totalSeattle : 0 ,
-  geCustomer : function (min,max)
+function hourTotal ()
+{
+  let tr = document.createElement('tr');
+  table.appendChild(tr);
+  let nam = document.createElement('td');
+  nam.textContent = 'Total Hour' ;
+  tr.appendChild(nam);
+  for (let i = 1 ; i < hour.length ; i++)
   {
-
-    this.avgCustomer = Math.floor((Math.random() * (max - min + 1) + min)*1) ;
-    this.avgCookiePerhour = this.avgCustomer * this.avgCookie ;
-    this.totalSeattle += this.totalSeattle ;
-    return this.avgCookiePerhour ;
-  },
-  print : function ()
-  {
-    let cookie = document.getElementById('cookie');
-
-    let article = document.createElement('article');
-    cookie.appendChild(article);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = this.name;
-    article.appendChild(h2);
-    let t = 0 ;
-    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
-    for (let i = 0 ; i < this.hourCookie.length ; i++)
-    {
-      li = document.createElement('li');
-      li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
-      t += parseInt(this.geCustomer(this.min,this.max)) ;
-      this.totalSeattle = (t) ;
-      article.appendChild(li);
-    }
-
-    let hr = document.createElement('hr');
-    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
-    article.appendChild(hr);
+    let th = document.createElement('th');
+    th.textContent = ranNum('',1000,900,500) ;
+    tr.appendChild(th);
   }
-};
+  let td = document.createElement('td');
+  td.textContent = ranNum('',10000,9000,5000) + ' Cookies';
+  tr.appendChild(td);
+}
 
-// object FOUR ( PARIS ) :
-const paris = {
-  name : 'PARIS' ,
-  min : 20 ,
-  max : 38 ,
-  avgCustomer : 0 ,
-  avgCookie : 2.3 ,
-  avgCookiePerhour : 0 ,
-  hour : ['6 Am : ','7 Am : ','8 Am : ','9 Am : ','10 Am : ','11 Am : ','12 pm : ','1 pm : ','2 pm : ','3 pm : ','4 pm : ','5 pm : ','6 pm : ','7 pm : ','8 pm : '],
-  hourCookie : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-  totalSeattle : 0 ,
-  geCustomer : function (min,max)
-  {
-
-    this.avgCustomer = Math.floor((Math.random() * (max - min + 1) + min)*1) ;
-    this.avgCookiePerhour = this.avgCustomer * this.avgCookie ;
-    this.totalSeattle += this.totalSeattle ;
-    return this.avgCookiePerhour ;
-  },
-  print : function ()
-  {
-    let cookie = document.getElementById('cookie');
-
-    let article = document.createElement('article');
-    cookie.appendChild(article);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = this.name;
-    article.appendChild(h2);
-    let t = 0 ;
-    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
-    for (let i = 0 ; i < this.hourCookie.length ; i++)
-    {
-      li = document.createElement('li');
-      li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
-      t += parseInt(this.geCustomer(this.min,this.max)) ;
-      this.totalSeattle = (t) ;
-      article.appendChild(li);
-    }
-
-    let hr = document.createElement('hr');
-    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
-    article.appendChild(hr);
-  }
-};
-
-// object FIVE ( LIMA ) :
-const lima = {
-  name : 'LIMA' ,
-  min : 2 ,
-  max : 16 ,
-  avgCustomer : 0 ,
-  avgCookie : 4.6 ,
-  avgCookiePerhour : 0 ,
-  hour : ['6 Am : ','7 Am : ','8 Am : ','9 Am : ','10 Am : ','11 Am : ','12 pm : ','1 pm : ','2 pm : ','3 pm : ','4 pm : ','5 pm : ','6 pm : ','7 pm : ','8 pm : '],
-  hourCookie : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-  totalSeattle : 0 ,
-  geCustomer : function (min,max)
-  {
-
-    this.avgCustomer = Math.floor((Math.random() * (max - min + 1) + min)*1) ;
-    this.avgCookiePerhour = this.avgCustomer * this.avgCookie ;
-    this.totalSeattle += this.totalSeattle ;
-    return this.avgCookiePerhour ;
-  },
-  print : function ()
-  {
-    let cookie = document.getElementById('cookie');
-
-    let article = document.createElement('article');
-    cookie.appendChild(article);
-
-    let h2 = document.createElement('h2');
-    h2.textContent = this.name;
-    article.appendChild(h2);
-    let t = 0 ;
-    let li = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ;
-    for (let i = 0 ; i < this.hourCookie.length ; i++)
-    {
-      li = document.createElement('li');
-      li.textContent = this.hour[i] + parseInt(this.geCustomer(this.min,this.max)) + ' Cookies' ;
-      t += parseInt(this.geCustomer(this.min,this.max)) ;
-      this.totalSeattle = (t) ;
-      article.appendChild(li);
-    }
-
-    let hr = document.createElement('hr');
-    hr.textContent = 'Total : ' + this.totalSeattle + ' Cookies';
-    article.appendChild(hr);
-  }
-};
-//////////////////////////////////
-// CALLED :
+let seattle = new Cookie( 'SEATTLE' , 23 , 65 , 6.3 );
+let tokyo = new Cookie( 'TOKYO' , 3 , 24 , 1.2 );
+let dubai = new Cookie( 'DUBAI' , 11 , 38 , 3.7 );
+let paris = new Cookie( 'PARIS' , 20 , 38 , 2.3 );
+let lima = new Cookie( 'LIMA' , 2 , 16 , 4.6 );
 
 seattle.print();
 tokyo.print();
@@ -240,5 +87,11 @@ dubai.print();
 paris.print();
 lima.print();
 
+hourTotal();
 
-
+function ranNum (min,max)
+{
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor((Math.random() * (max - min + 1) + min)*1) ;
+}
