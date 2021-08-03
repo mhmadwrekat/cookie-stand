@@ -1,65 +1,158 @@
+
+.logo{
+  width : 65% ;
+  height : 150px ;
+  margin : 10px ;
+  padding : 10px ;
+}
+
+h2 {
+  margin : 10px ;
+  padding : 10px ;
+  color : rgb(233, 106, 106) ;
+  font-size: 35px ;
+}
+.p1{
+  padding : 10px ;
+  margin : 10px ;
+  font-weight : bolder ;
+  font-size: 25px ;
+  float : right ;
+  text-align : center ;
+}
+.p2{
+  padding : 10px ;
+  margin : 10px ;
+  font-weight : bolder ;
+  font-size: 25px ;
+  float : right ;
+  clear : right ;
+  text-align : center ;
+}
+.pic1{
+  padding : 10px ;
+  margin : 10px ;
+  float : right ;
+  width : 30% ;
+
+  clear : right ;
+  height : 35% ;
+}
+.pic2{
+  padding : 10px ;
+  margin : 10px ;
+  float : right ;
+  width : 30% ;
+  clear : right ;
+  height : 5% ;
+}
+
+.p3{
+  padding : 10px ;
+  margin : 10px ;
+  font-weight : bolder ;
+  font-size: 25px ;
+  float : right ;
+  clear : right ;
+  text-align : center ;
+}
+.alone{
+    font-weight : bolder ;
+  font-size: 25px ;
+  width : 30% ;
+  height : 10% ;  
+  padding : 10px ;
+  margin : 10px ;
+}
+
+.pic3{
+  padding : 10px ;
+  margin : 10px ;
+  float : right ;
+  clear : right ;
+  width : 30% ;
+  height : 10% ;
+}
+footer {
+  text-align: center ;
+  font-size : 22px ;
+  font-style : italic ;
+}
+
 .html {
-    background-color: rgb(18, 122, 122);
+  background-color: rgb(18, 122, 122);
+
+}
+html {
+  background-color: teal ;
+  width : 100% ;
+}
+ul , li {
+  padding : 2px ;
+  font-weight : bold ;
   
   }
-  ul , li {
-    padding : 2px ;
-    font-weight : bold ;
-    
+  body {
+width : 960px ;
+  }
+  th{
+    color :black ;
+    font-weight: bolder;
+    position :relative ;
+    top : 1.5% ;
+    left : 0.5% ;
+    font-family :sans-serif ;
+    margin : 10px ;
+    padding : 10px ;
+    width : 20px ;
+    border: outset ;
+   /* border : 4px solid black ;*/
+    background-color:rgb(204, 204, 41) ;
+  width :100px ;
+  height : 40% ;
+  }
+table , tr , td {
+
+    position :relative ;
+    top : 1.5% ;
+    left : 0.5% ;
+    font-family :sans-serif ;
+    margin : 10px ;
+    padding : 10px ;
+    font-weight: bold ;
+    width : 20px ;
+    border: outset ;
+    border : 2px solid black ;
+    color : rgb(114, 26, 26) ;
+    background-color:rgb(204, 204, 41) ;
+  width :60% ;
+
+  }
+  h1 {
+    margin : 10px ;
+    padding : 10px ;
+      color :lightcoral ;
+      font-size : 40px ;
+
     }
-    main {
-        text-align : center ;
-    }
-    table, th, td , tr {
-      position :relative ;
-      top : 1.5% ;
-      left : 0.5% ;
-      font-family :sans-serif ;
-      margin : 30px ;
-      padding : 5px ;
-      font-weight: bold ;
-      width : 15px ;
-      border: outset ;
-      color : rgb(28, 28, 199) ;
-      background-color:rgb(216, 216, 31) ;
-    }
-    h1 {
-        text-align : center ;
-    
-        color :lightcoral ;
-        font-weight : 50px ;
-    }
-    a {
-        font-size: 20px ;
-    
-        border : 10px ;
-    }
-    .bu {
-      position : absolute ;
-       right : 50px ;
-      top : 600px ;
-      border : 1 px solid rgb(230, 20, 20) ;
-      background-color: lightcoral ;
-      outline : none ;
-      cursor : pointer ;
-      font-family: 1px ;
-      width : 13% ;
-      height : 6% ;
-        
-    }
-    /*button {
-      background-color: lightcoral;
-        width : 25% ;
-        position: absolute;
-        right : 500px ;
-        display : block ;
-        padding : 10px 0 ;
-        border : 1 px solid rgb(230, 20, 20) ;
-          
-    }*/
-    
-    img {
-    
-        width : 800px ;
-        height : 300px ;
-    }
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width : 100px ;
+    height : 25px ;
+    float :right ;
+      font-size: 16px ;
+      text-decoration: none ;
+      margin : 10px ;
+      padding : 10px ;
+    background-color: rgb(2, 112, 112);
+    font-weight : bolder ;
+    color : black ;
+    display :block ;    
+  }
+  img {
+  
+      width : 800px ;
+      height : 300px ;
+  }
+  
