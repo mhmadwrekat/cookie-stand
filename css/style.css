@@ -1,133 +1,129 @@
 
+.headerSales{
+  display: grid ;
+  grid-template-columns: 80% auto ;
+  background-color: white ;
+  width : 100% ;
+  height : 200px ;
+  align-items : center ; 
+}
+
+
+header {
+  display: grid ;
+  grid-template-columns: auto 50% auto ;
+  background-color: white ;
+  width : 100% ;
+  margin-bottom : 20px ;}
+form {
+
+  font-size : 25px ;
+padding-top: 50px ;
+  width : 100% ;
+  display: grid ;
+  grid-template-columns: auto auto auto auto;
+  gap : 15px ;
+}
+
+form input:nth-child(9) {
+font-size : 25px ;  
+}
+input{
+  background-color: rgb(185, 250, 120);
+  width : 200px ;
+  height : 50px ;
+}
+.sec{
+  margin : auto ;
+  display : grid ;
+  grid-template-columns: auto 50% ;
+  gap : 50px ;
+  padding-bottom: 30px ;
+}
 .logo{
-  width : 65% ;
+  
+  width : 100% ;
   height : 150px ;
   margin : 10px ;
   padding : 10px ;
 }
 
 h2 {
+  text-align : center ;
   margin : 10px ;
   padding : 10px ;
   color : rgb(233, 106, 106) ;
-  font-size: 35px ;
+  font-size: 45px ;
+  padding-bottom: 100px ;
+  padding-top: 50px ;
 }
-.p1{
-  padding : 10px ;
-  margin : 10px ;
-  font-weight : bolder ;
-  font-size: 25px ;
-  float : right ;
-  text-align : center ;
-}
-.p2{
-  padding : 10px ;
-  margin : 10px ;
-  font-weight : bolder ;
-  font-size: 25px ;
-  float : right ;
-  clear : right ;
-  text-align : center ;
-}
-.pic1{
-  padding : 10px ;
-  margin : 10px ;
-  float : right ;
-  width : 30% ;
-
-  clear : right ;
-  height : 35% ;
-}
-.pic2{
-  padding : 10px ;
-  margin : 10px ;
-  float : right ;
-  width : 30% ;
-  clear : right ;
-  height : 5% ;
+p {
+  font-weight: bolder ;
+  font-size : 30px ;
 }
 
-.p3{
-  padding : 10px ;
-  margin : 10px ;
-  font-weight : bolder ;
-  font-size: 25px ;
-  float : right ;
-  clear : right ;
-  text-align : center ;
-}
-.alone{
-    font-weight : bolder ;
-  font-size: 25px ;
-  width : 30% ;
-  height : 10% ;  
-  padding : 10px ;
-  margin : 10px ;
-}
-
-.pic3{
-  padding : 10px ;
-  margin : 10px ;
-  float : right ;
-  clear : right ;
-  width : 30% ;
-  height : 10% ;
+img {
+  width : 400px ;
+  height : 300px ;
 }
 footer {
+  display : grid ;
+  -ms-grid-row-align: auto ;
+  gap : 30px ;
   text-align: center ;
-  font-size : 22px ;
+  align-items: center;
+  font-weight : bolder ;
+  font-size : 25px ;
   font-style : italic ;
+  background-color: white ;
+  height : 200px ;
+
 }
 
 .html {
   background-color: rgb(18, 122, 122);
 
 }
-html {
-  background-color: teal ;
-  width : 100% ;
-}
 ul , li {
   padding : 2px ;
   font-weight : bold ;
   
   }
-  body {
-width : 960px ;
-  }
-  th{
-    color :black ;
-    font-weight: bolder;
-    position :relative ;
-    top : 1.5% ;
-    left : 0.5% ;
-    font-family :sans-serif ;
-    margin : 10px ;
-    padding : 10px ;
-    width : 20px ;
-    border: outset ;
-   /* border : 4px solid black ;*/
-    background-color:rgb(204, 204, 41) ;
-  width :100px ;
-  height : 40% ;
-  }
-table , tr , td {
+  
+.mainSales{
+  /*width : 1000px ;*/
+  height : 1200px ;
+}
 
-    position :relative ;
-    top : 1.5% ;
+body {
+  background-color: teal ;
+width : 960px ;
+margin : auto ;
+  }
+main {
+    width : 960px ;
+    margin : auto ;
+      }
+
+table , tr , td ,th{
+  top : 1.5% ;
     left : 0.5% ;
     font-family :sans-serif ;
-    margin : 10px ;
-    padding : 10px ;
-    font-weight: bold ;
-    width : 20px ;
     border: outset ;
     border : 2px solid black ;
     color : rgb(114, 26, 26) ;
     background-color:rgb(204, 204, 41) ;
-  width :50% ;
-
+    height : 30px ;
   }
+  .firstT{
+    text-align : center ;
+    width : 100% ;
+    font-weight: bolder;
+    height : 500px ;
+    font-size : 22px ;
+  }
+  
+
   h1 {
     margin : 10px ;
     padding : 10px ;
@@ -144,15 +140,12 @@ table , tr , td {
       font-size: 16px ;
       text-decoration: none ;
       margin : 10px ;
-      padding : 10px ;
+      padding-top: 50px ;
+      padding : 10px  ;
     background-color: rgb(2, 112, 112);
     font-weight : bolder ;
     color : black ;
     display :block ;    
   }
-  img {
-  
-      width : 800px ;
-      height : 300px ;
-  }
+
   

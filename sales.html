@@ -2,26 +2,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <!-- <link rel='stylesheet' href='./css/reset.css' />
-       -->
-       <link rel='stylesheet' href='./css/style.css' />
-        <h1> Pat's Salmon Cookies : Sales Data </h1>
+       <!-- <link rel='stylesheet' href='./css/reset.css' /> -->
+        <link rel='stylesheet' href='./css/style.css' />
     </head>
-        <title>Sales Data</title>
+    <title>Sales Data</title>
     <body>
-        <header>
+        <header class='headerSales'>
+            <h1>Pat's Salmon Cookies : Sales Data</h1>
+            <a href='index.html'>Home Page</a>
         </header>
 
-        <main>
-            <button class = 'bu'><a href='index.html'>Home Page</a></button>
-            
-            <article id = 'cookie'>
-            </article>
+        <main class='mainSales'>    
+         <fieldset>Add New Shop<form id='newShop'>
+                <label for='shopName'>Shop Name</label>
+                <input type='text' name='' id='shopName'> 
+
+                <label for='minCustomer'>Minimam Customer</label>
+                <input type='number' name='' id='minCustomer'> 
+
+                <label for='maxCustomer'>Maximam Customer</label>
+                <input type='number' name='' id='maxCustomer'>
+
+                <label for='avgCookie'>Average Cookies</label>
+                <input type='text' name='' id='avgCookie'> 
+
+                <input type='submit' value='save'> 
+            </form></fieldset>
+
+            <br><br><br>
+            <br><br><br>
+            <br><br><br>
+        <section class='firstT'>
+            <table id = 'cookie'>
+            </table>
+        </section>
         </main>
         <footer>
+            & Copy.Right 2021
         </footer>
         <script src='./js/app.js'>
         </script>
     </body>
-
 </html>
