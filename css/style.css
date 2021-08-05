@@ -1,4 +1,3 @@
-
 .headerSales{
   display: grid ;
   grid-template-columns: 80% auto ;
@@ -7,8 +6,12 @@
   height : 200px ;
   align-items : center ; 
 }
-
-
+fieldset{
+  font-size: 30px ;
+  text-align: center;
+  font-weight: bolder;
+  background-color: rgb(170, 170, 42);
+}
 header {
   display: grid ;
   grid-template-columns: auto 50% auto ;
@@ -16,20 +19,21 @@ header {
   width : 100% ;
   margin-bottom : 20px ;}
 form {
-
+  color : rgb(62, 84, 182) ;
+  background-color :rgb(204, 204, 41);
   font-size : 25px ;
 padding-top: 50px ;
+
   width : 100% ;
   display: grid ;
   grid-template-columns: auto auto auto auto;
-  gap : 15px ;
+  gap : 10px ;
 }
-
 form input:nth-child(9) {
 font-size : 25px ;  
 }
 input{
-  background-color: rgb(185, 250, 120);
+  background-color: rgb(219, 209, 209);
   width : 200px ;
   height : 50px ;
 }
@@ -47,8 +51,9 @@ input{
   margin : 10px ;
   padding : 10px ;
 }
-
 h2 {
+  font-family :'Courier New', Courier, monospace;
+  font-weight : bolder ;
   text-align : center ;
   margin : 10px ;
   padding : 10px ;
@@ -58,10 +63,9 @@ h2 {
   padding-top: 50px ;
 }
 p {
-  font-weight: bolder ;
-  font-size : 30px ;
+  font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size : 35px ;
 }
-
 img {
   width : 400px ;
   height : 300px ;
@@ -77,24 +81,19 @@ footer {
   font-style : italic ;
   background-color: white ;
   height : 200px ;
-
 }
-
 .html {
   background-color: rgb(18, 122, 122);
-
 }
 ul , li {
   padding : 2px ;
   font-weight : bold ;
-  
+  font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
   }
-  
 .mainSales{
-  /*width : 1000px ;*/
+  width : 960px ;
   height : 1200px ;
 }
-
 body {
   background-color: teal ;
 width : 960px ;
@@ -104,14 +103,13 @@ main {
     width : 960px ;
     margin : auto ;
       }
-
 table , tr , td ,th{
   top : 1.5% ;
     left : 0.5% ;
-    font-family :sans-serif ;
+    font-family :cursive;
     border: outset ;
     border : 2px solid black ;
-    color : rgb(114, 26, 26) ;
+    color : rgb(62, 84, 182) ;
     background-color:rgb(204, 204, 41) ;
     height : 30px ;
   }
@@ -122,22 +120,20 @@ table , tr , td ,th{
     height : 500px ;
     font-size : 22px ;
   }
-  
-
   h1 {
+    font-family :'Courier New', Courier, monospace;
     margin : 10px ;
     padding : 10px ;
       color :lightcoral ;
       font-size : 40px ;
-
     }
   a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     text-align: center;
     width : 100px ;
     height : 25px ;
     float :right ;
-      font-size: 16px ;
+      font-size: 18px ;
       text-decoration: none ;
       margin : 10px ;
       padding-top: 50px ;
@@ -147,5 +143,3 @@ table , tr , td ,th{
     color : black ;
     display :block ;    
   }
-
-  
