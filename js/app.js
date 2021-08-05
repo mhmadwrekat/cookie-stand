@@ -21,8 +21,7 @@ function ranNum (min,max)
 }
 
 let cookie = document.getElementById('cookie');
-/*let table = document.createElement('table');
-cookie.appendChild(table);*/
+
 
 Cookie.prototype.print = function()
 {
